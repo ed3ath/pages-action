@@ -15,6 +15,7 @@ try {
 	const directory = getInput("directory", { required: true });
 	const gitHubToken = getInput("gitHubToken", { required: false });
 	const branch = getInput("branch", { required: false });
+	const isProduction = getInput("production", { required: false });
 	const workingDirectory = getInput("workingDirectory", { required: false });
 
 	const getProject = async () => {
@@ -127,7 +128,7 @@ try {
 		const project = await getProject();
 		if (!project) throw new Error("Unable to find pages project");
 
-		const productionEnvironment = githubBranch === project.production_branch || branch === project.production_branch;
+		const productionEnvironment = githubBranch === project.production_branch || branch === project.production_branch || isProduction;
 		const environmentName = `${projectName} (${productionEnvironment ? "Production" : "Preview"})`;
 
 		let gitHubDeployment: Awaited<ReturnType<typeof createGitHubDeployment>>;
