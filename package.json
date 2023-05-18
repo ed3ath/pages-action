@@ -1,5 +1,5 @@
 {
-	"name": "pages-action",
+	"name": "cloudflare-action",
 	"version": "1.3.0",
 	"description": "Publish to Cloudflare Pages",
 	"main": "index.js",
@@ -10,7 +10,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/cloudflare/pages-action.git"
+		"url": "git+https://github.com/ed3ath/pages-action.git"
 	},
 	"keywords": [
 		"Cloudflare Pages",
@@ -18,9 +18,9 @@
 	],
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/cloudflare/pages-action/issues"
+		"url": "https://github.com/ed3ath/pages-action/issues"
 	},
-	"homepage": "https://github.com/cloudflare/pages-action#readme",
+	"homepage": "https://github.com/ed3ath/pages-action#readme",
 	"dependencies": {
 		"@actions/core": "^1.10.0",
 		"@actions/github": "^5.1.1",
